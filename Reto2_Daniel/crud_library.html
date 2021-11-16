@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ACCIONES LIBRARY</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/funciones_cubiculo.js"></script>
+        <style type="text/css">
+            th{
+                text-align: right;
+            }
+            .azul{
+                background-color: aquamarine;
+            }
+            .rojo{
+                background-color: rgb(226, 191, 207)
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2 style="color: blue;">FORMULARIOS PARA GESTIONAR CUBICULOS</h2>
+            <hr style="width: 50%;"> 
+            <fieldset style="width: 50%;">
+                <legend style="color: blue;">Datos de cubiculo:</legend>
+                <table border="0" width="100%">
+                   <caption>Operaciones sobre cubiculos</caption> 
+                   <tr class="azul">
+                       <th>ID:</th> 
+                       <td><input id="id" type="number" placeholder="Digite el Codigo del cubiculo"></td> 
+                   </tr> 
+                   <tr class="rojo">
+                        <th>TARGET:</th> 
+                        <td><input id="target" type="text" placeholder="Digite el objetivo del cubiculo"></td> 
+                    </tr> 
+                    <tr class="azul">
+                        <th>CAPACITY:</th> 
+                        <td><input id="capacity" type="number" step="any" placeholder="Digite la capacidad del cubiculo"></td> 
+                    </tr>
+                    <tr class="azul">
+                        <th>CATEGORY_ID:</th> 
+                        <td><input id="category_id" type="number" placeholder="Digite el id de la categoria del cubiculo"></td> 
+                    </tr>
+                    <tr class="rojo">
+                        <th>NAME:</th> 
+                        <td><input id="name" type="text" placeholder="Digite el nombre del cubiculo"></td> 
+                    </tr>
+                    <tr><td>&nbsp;</td></tr> 
+                    <tr class="azul" >
+                        <td colspan="2" style="text-align: right">
+                            &nbsp;&nbsp; 
+                            <span id="btnEliminar">
+                                <img src="img/eliminar48px.png" onclick="eliminarCubiculo()">
+                            </span>
+                            &nbsp;&nbsp;
+                            <span id="btnEditar" onclick="actualizarCubiculo()">
+                                <img src="img/editar48px.png">
+                            </span>
+                            &nbsp;&nbsp; 
+                            <span id="btnGuardar"  onclick="guardarCubiculo()">
+                                <img src="img/guardar48px.png">
+                            </span>&nbsp;&nbsp;
+                        </td>
+                    </tr>
+
+                </table>
+            </fieldset>
+        </center>
+    </body> 
+</html>
